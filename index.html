@@ -1,84 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF‑8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Airline Booking Form</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    form { max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
-    fieldset { border: none; margin-bottom: 15px; }
-    legend { font-weight: bold; margin-bottom: 10px; }
-    label { display: block; margin-bottom: 5px; }
-    input, select { width: 100%; padding: 8px; margin-bottom: 10px; }
-    .inline { display: flex; gap: 10px; }
-    .inline > div { flex: 1; }
-    button { padding: 10px 15px; background-color: #28a745; color: white; border: none; border-radius: 4px; cursor: pointer; }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoodBoard</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <form action="#" method="post">
-    <fieldset>
-      <legend>Trip Type</legend>
-      <label><input type="radio" name="trip-type" value="one-way"> One Way</label>
-      <label><input type="radio" name="trip-type" value="round-trip" checked> Round Trip</label>
-      <label><input type="radio" name="trip-type" value="multi-city"> Multi-City</label>
-    </fieldset>
-
-    <div class="inline">
-      <div>
-        <label for="from">From:</label>
-        <input type="text" id="from" name="from" placeholder="Departure city or airport">
-      </div>
-      <div>
-        <label for="to">To:</label>
-        <input type="text" id="to" name="to" placeholder="Destination">
-      </div>
+  <div class="container">
+    <h1>🌟 MoodBoard</h1>
+    <p>Select your mood today:</p>
+    <div class="mood-buttons">
+      <button onclick="setMood('happy')">😊 Happy</button>
+      <button onclick="setMood('sad')">😢 Sad</button>
+      <button onclick="setMood('angry')">😠 Angry</button>
+      <button onclick="setMood('calm')">😌 Calm</button>
     </div>
-
-    <div class="inline">
-      <div>
-        <label for="depart">Depart On:</label>
-        <input type="date" id="depart" name="depart">
-      </div>
-      <div>
-        <label for="return">Return On:</label>
-        <input type="date" id="return" name="return">
-      </div>
-    </div>
-
-    <div class="inline">
-      <div>
-        <label for="adults">Adults:</label>
-        <select id="adults" name="adults">
-          <option>1</option><option>2</option><option>3</option><option>4+</option>
-        </select>
-      </div>
-      <div>
-        <label for="children">Children:</label>
-        <select id="children" name="children">
-          <option>0</option><option>1</option><option>2</option><option>3+</option>
-        </select>
-      </div>
-      <div>
-        <label for="infants">Infants:</label>
-        <select id="infants" name="infants">
-          <option>0</option><option>1</option><option>2</option><option>3+</option>
-        </select>
-      </div>
-    </div>
-
-    <fieldset>
-      <legend>More Options</legend>
-      <label for="class">Class of Travel:</label>
-      <select id="class" name="class">
-        <option>Economy</option><option>Business</option><option>First Class</option>
-      </select>
-      <label for="airline">Preferred Airline:</label>
-      <input type="text" id="airline" name="airline" placeholder="Optional">
-    </fieldset>
-
-    <button type="submit">Search Flights</button>
-  </form>
+    <div id="quote" class="quote-box"></div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
