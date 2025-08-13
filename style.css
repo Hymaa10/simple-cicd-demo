@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.mood-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.mood-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.quote-box {
+  margin-top: 20px;
+  font-size: 20px;
+  font-style: italic;
+}
